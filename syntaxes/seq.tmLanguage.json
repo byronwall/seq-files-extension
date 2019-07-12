@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Test Scripts",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#line_comment"
+    },
+    {
+      "include": "#preprocess"
+    },
+    {
+      "include": "#commands"
+    },
+    {
+      "include": "#constants"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.seq",
+          "match": "\\b(if|while|for|return|end)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.seq",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.seq",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "line_comment": {
+      "name": "comment.line",
+      "begin": "(!|\\|)",
+      "end": "\n"
+    },
+    "preprocess": {
+      "name": "support",
+      "begin": "(#(load|define|include)|cond_exit:|exit_handler:)",
+      "end": "\\b"
+    },
+    "commands": {
+      "name": "entity.name.function",
+      "match": "\\b(wait|call_external|stop)\\b"
+    },
+    "constants": {
+      "name": "constant",
+      "match": "\\b(\\d+|T|F|TRUE|FALSE)\\b"
+    }
+  },
+  "scopeName": "source.seq"
+}

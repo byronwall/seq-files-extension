@@ -1,0 +1,25 @@
+{
+    "name": "seq-files",
+    "displayName": "seq_files",
+    "description": "Syntax highlighting for SEQ files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "seq",
+            "aliases": ["Test Scripts", "seq"],
+            "extensions": [".seq"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "seq",
+            "scopeName": "source.seq",
+            "path": "./syntaxes/seq.tmLanguage.json"
+        }]
+    }
+}
