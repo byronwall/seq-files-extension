@@ -26,7 +26,7 @@
       "patterns": [
         {
           "name": "keyword.control.seq",
-          "match": "\\b(if|while|for|return|end)\\b"
+          "match": "(?i)\\b(if|while|for|return|end|wait|stop|procedure|end_procedure|switch|case|loop|until)\\b"
         }
       ]
     },
@@ -48,12 +48,12 @@
     },
     "preprocess": {
       "name": "support",
-      "begin": "(#(load|define|include)|cond_exit:|exit_handler:)",
+      "begin": "(?i)(#(load|define|include)|cond_exit:|exit_handler:)",
       "end": "\\b"
     },
     "commands": {
       "name": "entity.name.function",
-      "match": "\\b(wait|call_external|stop)\\b"
+      "match": "(?i)\\b(call|on_exit|goto|call_external)\\b"
     },
     "constants": {
       "name": "constant",

@@ -2,8 +2,18 @@
 
 All notable changes to the "seq-files" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.1.3]
 
-## [Unreleased]
+- Ensure that `call_external` is treated as a command type same as `call`
 
-- Initial release
+## [0.1.2]
+
+- Ensure that `goto` is treated as a command type
+
+## [0.1.0]
+
+- Ensure that `if` commands are tracked for indentation
+
+## Before 0.1.0
+
+- Not tracked
