@@ -3,7 +3,7 @@
   "displayName": "seq_files",
   "publisher": "none",
   "description": "Syntax highlighting for SEQ files",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./out/extension.js",
   "engines": {
     "vscode": "^1.41.0"
@@ -45,7 +45,8 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile"
+    "pretest": "npm run compile",
+    "package": "yarn compile && yarn run vsce package"
   },
   "dependencies": {}
 }
