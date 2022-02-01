@@ -2,6 +2,10 @@
 
 All notable changes to the "seq-files" extension will be documented in this file.
 
+## [0.1.4]
+
+- Bump version and publish to VS Code Marketplace
+
 ## [0.1.3]
 
 - Ensure that `call_external` is treated as a command type same as `call`

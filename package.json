@@ -1,9 +1,9 @@
 {
   "name": "seq-files",
   "displayName": "seq_files",
-  "publisher": "none",
+  "publisher": "byronwall",
   "description": "Syntax highlighting for SEQ files",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "./out/extension.js",
   "engines": {
     "vscode": "^1.41.0"
@@ -46,7 +46,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
-    "package": "yarn compile && yarn run vsce package"
+    "package": "npm run compile && npm run vsce package",
+    "deploy": "npm run compile && npx vsce publish"
   },
   "dependencies": {},
   "repository": "none"
